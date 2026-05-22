@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public enum PositionAlignMode
 [RequireComponent(typeof(Collider))]
 public class MorphInteractable : MonoBehaviour, IInteractable
 {
+    public static event Action<MorphInteractable> MorphCompleted;
     [Header("Dönüşüm")]
     [Tooltip("E'ye basınca spawn edilecek yeni obje prefab'ı")]
     [SerializeField] private GameObject morphTargetPrefab;
@@ -58,6 +60,7 @@ public class MorphInteractable : MonoBehaviour, IInteractable
         ApplyMorph();
         _morphed = true;
         _busy = false;
+        MorphCompleted?.Invoke(this);
     }
 
     private Vector3 GetSmokePosition()
