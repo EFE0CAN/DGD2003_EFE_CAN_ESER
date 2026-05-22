@@ -4,8 +4,9 @@ using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
-/// TextMeshPro ile geri sayım. Canvas'taki TextMeshPro - Text (UI) bileşenini sürükle.
+/// TextMeshPro dijital geri sayım: saniye tikinde büyüme, 30 sn altında kırmızı-beyaz yanıp sönme.
 /// </summary>
+[RequireComponent(typeof(RectTransform))]
 public class GameTimer : MonoBehaviour
 {
     [Header("UI")]
@@ -16,9 +17,21 @@ public class GameTimer : MonoBehaviour
     [SerializeField] private bool startOnPlay = true;
     [SerializeField] private bool countDown = true;
 
-    [Header("Uyarı (son saniyeler)")]
+    [Header("Dijital saat görünümü")]
+    [SerializeField] private float characterSpacing = 12f;
+
+    [Header("Uyarı — 30 sn ve altı")]
     [SerializeField] private float warningThreshold = 30f;
-    [SerializeField] private float blinkSpeed = 4f;
+    [Tooltip("30 altında sürekli küçük-büyük animasyon")]
+    [SerializeField] private float warningScaleMin = 0.85f;
+    [SerializeField] private float warningScaleMax = 1.3f;
+    [SerializeField] private float warningScaleSpeed = 5f;
+    [Tooltip("Her saniye değişiminde ekstra vurgu (30 altında)")]
+    [SerializeField] private float punchPeakScale = 1.4f;
+    [SerializeField] private float punchDuration = 0.2f;
+    [SerializeField] private float blinkSpeed = 5f;
+    [SerializeField] private bool blinkColon = true;
+    [SerializeField] private float colonBlinkRate = 2f;
     [SerializeField] private Color warningColorA = Color.red;
     [SerializeField] private Color warningColorB = Color.white;
     [SerializeField] private Color normalColor = Color.white;
@@ -30,18 +43,26 @@ public class GameTimer : MonoBehaviour
 
     private float _timeLeft;
     private bool _isRunning;
+    private float _punchTimer;
+    private int _lastWholeSecond = -1;
+    private Vector3 _baseTextScale = Vector3.one;
 
     public float TimeLeft => _timeLeft;
     public bool IsRunning => _isRunning;
+
+    private bool InWarning => countDown && _isRunning && _timeLeft <= warningThreshold && _timeLeft > 0f;
 
     private void Awake()
     {
         if (timerText == null)
             timerText = GetComponentInChildren<TMP_Text>();
+
+        CacheBaseScale();
     }
 
     private void Start()
     {
+        ApplyDigitalStyle();
         ResetTimer();
 
         if (startOnPlay)
@@ -73,39 +94,64 @@ public class GameTimer : MonoBehaviour
             }
         }
 
+        TickSecondPulse();
         RefreshUI();
+    }
+
+    private void CacheBaseScale()
+    {
+        if (timerText == null) return;
+
+        _baseTextScale = timerText.rectTransform.localScale;
+        if (_baseTextScale.sqrMagnitude < 0.0001f)
+            _baseTextScale = Vector3.one;
+    }
+
+    private void ApplyDigitalStyle()
+    {
+        if (timerText == null) return;
+
+        timerText.fontStyle = FontStyles.Bold;
+        timerText.characterSpacing = characterSpacing;
+        timerText.paragraphSpacing = 0f;
+        timerText.enableWordWrapping = false;
+        timerText.alignment = TextAlignmentOptions.Center;
+    }
+
+    private void TickSecondPulse()
+    {
+        if (!InWarning) return;
+
+        int wholeSecond = Mathf.FloorToInt(Mathf.Max(0f, _timeLeft));
+        if (wholeSecond == _lastWholeSecond) return;
+
+        _lastWholeSecond = wholeSecond;
+        _punchTimer = punchDuration;
     }
 
     public void ResetTimer()
     {
         _timeLeft = countDown ? totalSeconds : 0f;
+        _lastWholeSecond = -1;
+        _punchTimer = 0f;
         RefreshUI();
     }
 
-    public void StartTimer()
-    {
-        _isRunning = true;
-    }
-
-    public void PauseTimer()
-    {
-        _isRunning = false;
-    }
-
-    public void ResumeTimer()
-    {
-        _isRunning = true;
-    }
+    public void StartTimer() => _isRunning = true;
+    public void PauseTimer() => _isRunning = false;
+    public void ResumeTimer() => _isRunning = true;
 
     public void AddTime(float seconds)
     {
         _timeLeft += seconds;
         if (countDown && _timeLeft < 0f) _timeLeft = 0f;
+        _lastWholeSecond = -1;
         RefreshUI();
     }
 
     private void FinishTimer()
     {
+        _punchTimer = 0f;
         onTimeUp?.Invoke();
         OnTimeUp?.Invoke();
         RefreshUI();
@@ -117,16 +163,60 @@ public class GameTimer : MonoBehaviour
 
         int minutes = Mathf.FloorToInt(_timeLeft / 60f);
         int seconds = Mathf.FloorToInt(_timeLeft % 60f);
-        timerText.text = $"{minutes:00}:{seconds:00}";
 
-        if (countDown && _timeLeft <= warningThreshold && _timeLeft > 0f && _isRunning)
+        string separator = GetColonSeparator();
+        timerText.text = $"{minutes:00}{separator}{seconds:00}";
+
+        ApplyColor();
+        ApplyScaleAnimation();
+    }
+
+    private string GetColonSeparator()
+    {
+        if (!blinkColon || !InWarning)
+            return ":";
+
+        return Mathf.FloorToInt(Time.time * colonBlinkRate) % 2 == 0 ? ":" : " ";
+    }
+
+    private void ApplyColor()
+    {
+        if (InWarning)
         {
             float t = Mathf.PingPong(Time.time * blinkSpeed, 1f);
             timerText.color = Color.Lerp(warningColorA, warningColorB, t);
+            return;
         }
-        else
+
+        timerText.color = normalColor;
+    }
+
+    private void ApplyScaleAnimation()
+    {
+        if (timerText == null) return;
+
+        float scale = 1f;
+
+        if (InWarning)
         {
-            timerText.color = normalColor;
+            float wave = (Mathf.Sin(Time.time * warningScaleSpeed) + 1f) * 0.5f;
+            scale = Mathf.Lerp(warningScaleMin, warningScaleMax, wave);
+
+            if (_punchTimer > 0f)
+            {
+                _punchTimer -= Time.deltaTime;
+                float punchT = 1f - Mathf.Clamp01(_punchTimer / punchDuration);
+                float punchBoost = Mathf.Lerp(punchPeakScale, 1f, punchT * punchT);
+                scale *= punchBoost;
+            }
         }
+
+        timerText.rectTransform.localScale = _baseTextScale * scale;
+    }
+
+    private void OnDisable()
+    {
+        if (timerText != null)
+            timerText.rectTransform.localScale = _baseTextScale;
     }
 }

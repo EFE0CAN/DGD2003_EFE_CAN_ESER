@@ -450,7 +450,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 38789029}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 8095869903083833959, guid: 6ac3e86c69dbc4742a460ec4cdffebb2, type: 3}
@@ -2994,7 +2994,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 331465783}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 3440982441682308455, guid: 52ae95da3a81b584fafe61560a94df4a, type: 3}
@@ -3926,7 +3926,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 405611373}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 47907360159790522, guid: a9ad1688af1f5e84b845139e11a255cf, type: 3}
@@ -4047,7 +4047,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 421956318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 1987084078107111388, guid: a405db2faa3ccdf4b9d4e3a49dde8241, type: 3}
@@ -4273,7 +4273,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 435758097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 7383512644907261645, guid: 6a525c338fe05f0439a7c21a98d7756c, type: 3}
@@ -7198,7 +7198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 729594302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 3440982441682308455, guid: 52ae95da3a81b584fafe61560a94df4a, type: 3}
@@ -7328,7 +7328,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 737582112}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 3481116905711187248, guid: 6f9be7d44c7e1fe44aaca571f93eabaa, type: 3}
@@ -7859,7 +7859,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 801365890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 3481116905711187248, guid: 6f9be7d44c7e1fe44aaca571f93eabaa, type: 3}
@@ -8733,7 +8733,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 864995218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 8095869903083833959, guid: 6ac3e86c69dbc4742a460ec4cdffebb2, type: 3}
@@ -9365,7 +9365,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 984506171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4f5a6b7c8d9012345678901abcdef05, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a8b2c9e1f0d6375b2a8e6c4f1d9b3a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteraction
   interactionRange: 6
@@ -9951,7 +9951,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1061667050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 8393436859181216722, guid: 576d7de9bf1e60c49a98c9d8aa64fc2d, type: 3}
@@ -10072,7 +10072,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1096738773}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 3440982441682308455, guid: 52ae95da3a81b584fafe61560a94df4a, type: 3}
@@ -10102,7 +10102,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1131595240}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 47907360159790522, guid: a9ad1688af1f5e84b845139e11a255cf, type: 3}
@@ -11724,7 +11724,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1308096795}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 1484090408130213861, guid: f578857b84e7f0441ae557fde9f1e3f7, type: 3}
@@ -13757,15 +13757,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1518391988}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6b7c8d9e0f1234567890abcdef07, type: 3}
+  m_Script: {fileID: 11500000, guid: c7e4a291b83f5640d2e8f6a5b9c1d3e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameTimer
   timerText: {fileID: 794272431}
   totalSeconds: 90
   startOnPlay: 1
   countDown: 1
+  characterSpacing: 12
   warningThreshold: 30
-  blinkSpeed: 4
+  warningScaleMin: 0.85
+  warningScaleMax: 1.3
+  warningScaleSpeed: 5
+  punchPeakScale: 1.4
+  punchDuration: 0.2
+  blinkSpeed: 5
+  blinkColon: 1
+  colonBlinkRate: 2
   warningColorA: {r: 1, g: 0, b: 0, a: 1}
   warningColorB: {r: 1, g: 1, b: 1, a: 1}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -14081,7 +14089,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1542251381}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 2802696499530972800, guid: b138d1e8a9cb234418f17c15e8c6efc7, type: 3}
@@ -14478,7 +14486,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1624166947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 1614735114808722488, guid: 99f410d9a5a55dd4ea4481ac4c7b87e6, type: 3}
@@ -15872,7 +15880,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1739819016}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 3440982441682308455, guid: 52ae95da3a81b584fafe61560a94df4a, type: 3}
@@ -16275,7 +16283,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1812695074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 8095869903083833959, guid: 6ac3e86c69dbc4742a460ec4cdffebb2, type: 3}
@@ -16401,7 +16409,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1817400728}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 2802696499530972800, guid: b138d1e8a9cb234418f17c15e8c6efc7, type: 3}
@@ -16804,7 +16812,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1841135477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 3440982441682308455, guid: 52ae95da3a81b584fafe61560a94df4a, type: 3}
@@ -17298,7 +17306,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1868726688}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 47907360159790522, guid: a9ad1688af1f5e84b845139e11a255cf, type: 3}
@@ -18203,7 +18211,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1968562553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 3481116905711187248, guid: 6f9be7d44c7e1fe44aaca571f93eabaa, type: 3}
@@ -18641,7 +18649,7 @@ RectTransform:
   m_GameObject: {fileID: 1998668297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1518391989}
@@ -18862,7 +18870,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2017945862}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e4f5a6b7c8901234567890abcdef04, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2a8c1e9b4d3750a8e6c2f1d9b4a7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MorphInteractable
   morphTargetPrefab: {fileID: 7383512644907261645, guid: 6a525c338fe05f0439a7c21a98d7756c, type: 3}
