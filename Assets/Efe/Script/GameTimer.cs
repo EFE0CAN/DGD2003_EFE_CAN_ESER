@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 /// <summary>
-/// TextMeshPro dijital geri sayım: saniye tikinde büyüme, 30 sn altında kırmızı-beyaz yanıp sönme.
+/// TextMeshPro dijital geri sayım: son 10 sn'de kırmızı-beyaz yanıp sönme ve büyüme-küçülme.
 /// </summary>
 [RequireComponent(typeof(RectTransform))]
 public class GameTimer : MonoBehaviour
@@ -20,13 +20,13 @@ public class GameTimer : MonoBehaviour
     [Header("Dijital saat görünümü")]
     [SerializeField] private float characterSpacing = 12f;
 
-    [Header("Uyarı — 30 sn ve altı")]
-    [SerializeField] private float warningThreshold = 30f;
-    [Tooltip("30 altında sürekli küçük-büyük animasyon")]
+    [Header("Uyarı — son saniyeler")]
+    [SerializeField] private float warningThreshold = 10f;
+    [Tooltip("Bu sürenin altında kırmızı-beyaz yanıp sönme ve büyüme-küçülme")]
     [SerializeField] private float warningScaleMin = 0.85f;
     [SerializeField] private float warningScaleMax = 1.3f;
     [SerializeField] private float warningScaleSpeed = 5f;
-    [Tooltip("Her saniye değişiminde ekstra vurgu (30 altında)")]
+    [Tooltip("Her saniye değişiminde ekstra vurgu (uyarı modunda)")]
     [SerializeField] private float punchPeakScale = 1.4f;
     [SerializeField] private float punchDuration = 0.2f;
     [SerializeField] private float blinkSpeed = 5f;
