@@ -73,17 +73,10 @@ public class FirstPersonCharacterController : MonoBehaviour
 
     private void HandleCursorToggle()
     {
-        if (Keyboard.current == null) return;
+        if (Mouse.current == null) return;
+        if (EscMenu.IsOpen) return;
 
-        if (Keyboard.current.escapeKey.wasPressedThisFrame)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            return;
-        }
-
-        if (Mouse.current != null &&
-            Mouse.current.leftButton.wasPressedThisFrame &&
+        if (Mouse.current.leftButton.wasPressedThisFrame &&
             Cursor.lockState == CursorLockMode.None)
         {
             Cursor.lockState = CursorLockMode.Locked;

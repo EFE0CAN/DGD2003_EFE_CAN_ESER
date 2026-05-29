@@ -1,18 +1,27 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>
-/// Ana menü: Start → oyun sahnesi, Quit → çıkış.
-/// Buton On Click: StartGame() / QuitGame()
+/// Ana menü: 2 panel (Ana Menü / Ayarlar).
+/// START → oyun sahnesi, SETTINGS → ayarlar paneli, BACK → ana menü, QUIT → çıkış.
+/// Buton On Click: StartGame() / ShowSettings() / ShowMainMenu() / QuitGame()
+/// Slider On Value Changed: OnVolumeChanged(float)
 /// </summary>
 public class MainMenu : MonoBehaviour
 {
+    [Header("Paneller")]
+    [SerializeField] private GameObject mainMenuPanel;
+    [SerializeField] private GameObject settingsPanel;
+
+    [Header("Ses")]
+    [SerializeField] private Slider volumeSlider;
+
     [Header("Sahne")]
     [SerializeField] private string gameSceneName = "MainScene";
     [SerializeField] private int fallbackSceneBuildIndex = 1;
 
-    [Header("Opsiyonel")]
-    [SerializeField] private GameObject creditsPanel;
+    private const string VolumePrefKey = "MasterVolume";
 
     private void Awake()
     {
@@ -23,8 +32,35 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
-        if (creditsPanel != null)
-            creditsPanel.SetActive(false);
+        ShowMainMenu();
+
+        if (volumeSlider != null)
+        {
+            float savedVolume = PlayerPrefs.GetFloat(VolumePrefKey, 1f);
+            volumeSlider.SetValueWithoutNotify(savedVolume);
+            OnVolumeChanged(savedVolume);
+            volumeSlider.onValueChanged.AddListener(OnVolumeChanged);
+        }
+    }
+
+    /// <summary>Panel 1: START, SETTINGS, QUIT</summary>
+    public void ShowMainMenu()
+    {
+        if (mainMenuPanel != null)
+            mainMenuPanel.SetActive(true);
+
+        if (settingsPanel != null)
+            settingsPanel.SetActive(false);
+    }
+
+    /// <summary>Panel 2: Volume + BACK</summary>
+    public void ShowSettings()
+    {
+        if (mainMenuPanel != null)
+            mainMenuPanel.SetActive(false);
+
+        if (settingsPanel != null)
+            settingsPanel.SetActive(true);
     }
 
     public void StartGame()
@@ -50,10 +86,11 @@ public class MainMenu : MonoBehaviour
 #endif
     }
 
-    public void ToggleCredits()
+    public void OnVolumeChanged(float value)
     {
-        if (creditsPanel == null) return;
-        creditsPanel.SetActive(!creditsPanel.activeSelf);
+        AudioListener.volume = Mathf.Clamp01(value);
+        PlayerPrefs.SetFloat(VolumePrefKey, AudioListener.volume);
+        PlayerPrefs.Save();
     }
 
     private void TryLoadFallback()
