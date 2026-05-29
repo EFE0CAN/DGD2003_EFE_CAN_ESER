@@ -21,8 +21,6 @@ public class EscMenu : MonoBehaviour
     [Header("Sahne")]
     [SerializeField] private string mainMenuSceneName = "firstMenu";
 
-    private const string VolumePrefKey = "MasterVolume";
-
     private void Start()
     {
         if (menuRoot != null)
@@ -33,7 +31,7 @@ public class EscMenu : MonoBehaviour
 
         if (volumeSlider != null)
         {
-            float savedVolume = PlayerPrefs.GetFloat(VolumePrefKey, 1f);
+            float savedVolume = SaveSystem.GetVolume();
             volumeSlider.SetValueWithoutNotify(savedVolume);
             OnVolumeChanged(savedVolume);
             volumeSlider.onValueChanged.AddListener(OnVolumeChanged);
@@ -117,10 +115,5 @@ public class EscMenu : MonoBehaviour
             Debug.LogWarning($"[EscMenu] '{mainMenuSceneName}' yüklenemedi.", this);
     }
 
-    public void OnVolumeChanged(float value)
-    {
-        AudioListener.volume = Mathf.Clamp01(value);
-        PlayerPrefs.SetFloat(VolumePrefKey, AudioListener.volume);
-        PlayerPrefs.Save();
-    }
+    public void OnVolumeChanged(float value) => SaveSystem.SetVolume(value);
 }

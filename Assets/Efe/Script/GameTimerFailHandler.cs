@@ -73,6 +73,7 @@ public class GameTimerFailHandler : MonoBehaviour
         if (_handled) return;
 
         _handled = true;
+        SaveSystem.RecordLoss();
 
         StartCoroutine(FailSequence());
 

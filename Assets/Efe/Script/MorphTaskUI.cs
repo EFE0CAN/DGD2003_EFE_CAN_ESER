@@ -68,6 +68,14 @@ public class MorphTaskUI : MonoBehaviour
         if (_remaining > 0) return;
 
         _completionStarted = true;
+
+        GameTimer timer = FindFirstObjectByType<GameTimer>();
+        float score = timer != null ? timer.TimeLeft : 0f;
+        int totalMorphs = FindObjectsByType<MorphInteractable>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None).Length;
+        SaveSystem.RecordWin(score, totalMorphs);
+
         StartCoroutine(ShowPanelAndLoadScene());
     }
 

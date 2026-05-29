@@ -21,8 +21,6 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private string gameSceneName = "MainScene";
     [SerializeField] private int fallbackSceneBuildIndex = 1;
 
-    private const string VolumePrefKey = "MasterVolume";
-
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -36,7 +34,7 @@ public class MainMenu : MonoBehaviour
 
         if (volumeSlider != null)
         {
-            float savedVolume = PlayerPrefs.GetFloat(VolumePrefKey, 1f);
+            float savedVolume = SaveSystem.GetVolume();
             volumeSlider.SetValueWithoutNotify(savedVolume);
             OnVolumeChanged(savedVolume);
             volumeSlider.onValueChanged.AddListener(OnVolumeChanged);
@@ -86,12 +84,7 @@ public class MainMenu : MonoBehaviour
 #endif
     }
 
-    public void OnVolumeChanged(float value)
-    {
-        AudioListener.volume = Mathf.Clamp01(value);
-        PlayerPrefs.SetFloat(VolumePrefKey, AudioListener.volume);
-        PlayerPrefs.Save();
-    }
+    public void OnVolumeChanged(float value) => SaveSystem.SetVolume(value);
 
     private void TryLoadFallback()
     {
