@@ -6765,7 +6765,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 984506181}
+      - m_Target: {fileID: 1998668304}
         m_TargetAssemblyTypeName: EscMenu, Assembly-CSharp
         m_MethodName: QuitToMainMenu
         m_Mode: 1
@@ -8404,7 +8404,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 984506181}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EscMenu, Assembly-CSharp
         m_MethodName: OnVolumeChanged
         m_Mode: 0
@@ -10409,7 +10409,6 @@ GameObject:
   - component: {fileID: 984506178}
   - component: {fileID: 984506179}
   - component: {fileID: 984506180}
-  - component: {fileID: 984506181}
   m_Layer: 0
   m_Name: MainCam
   m_TagString: Untagged
@@ -10440,23 +10439,6 @@ MonoBehaviour:
   sprintMultiplier: 1.5
   gravity: -20
   jumpHeight: 1.5
---- !u!114 &984506181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984506171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8f9a0b1c2d34e56f7a8b9c0d1e2f3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EscMenu
-  menuRoot: {fileID: 34199564}
-  mainMenuPanel: {fileID: 1153196287}
-  settingsPanel: {fileID: 879870236}
-  volumeSlider: {fileID: 761106693}
-  mainMenuSceneName: firstMenu
 --- !u!143 &984506173
 CharacterController:
   m_ObjectHideFlags: 0
@@ -14317,7 +14299,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 984506181}
+      - m_Target: {fileID: 1998668304}
         m_TargetAssemblyTypeName: EscMenu, Assembly-CSharp
         m_MethodName: ShowMainMenu
         m_Mode: 1
@@ -17659,7 +17641,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 984506181}
+      - m_Target: {fileID: 1998668304}
         m_TargetAssemblyTypeName: EscMenu, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
@@ -20714,7 +20696,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 984506181}
+      - m_Target: {fileID: 1998668304}
         m_TargetAssemblyTypeName: EscMenu, Assembly-CSharp
         m_MethodName: ShowSettings
         m_Mode: 1
@@ -21563,6 +21545,7 @@ GameObject:
   - component: {fileID: 1998668299}
   - component: {fileID: 1998668298}
   - component: {fileID: 1998668303}
+  - component: {fileID: 1998668304}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -21676,6 +21659,23 @@ MonoBehaviour:
   nextSceneName: firstMenu
   nextSceneBuildIndex: 0
   delayBeforeLoad: 2
+--- !u!114 &1998668304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998668297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67a22cdb9e674b40a3fb79298d2ed85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EscMenu
+  menuRoot: {fileID: 34199564}
+  mainMenuPanel: {fileID: 1153196287}
+  settingsPanel: {fileID: 879870236}
+  volumeSlider: {fileID: 761106693}
+  mainMenuSceneName: firstMenu
 --- !u!1001 &2015711151
 PrefabInstance:
   m_ObjectHideFlags: 0
