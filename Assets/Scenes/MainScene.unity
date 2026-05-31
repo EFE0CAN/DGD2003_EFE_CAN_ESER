@@ -10343,7 +10343,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Find all the anomalies in the school!
+  m_text: Yusuf, help me! We have to find all the anomalies in the school!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a02c88ebdbacbaa4f83b2cdf38261fba, type: 2}
   m_sharedMaterial: {fileID: -5972744788976333697, guid: a02c88ebdbacbaa4f83b2cdf38261fba, type: 2}
@@ -10483,7 +10483,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -99.087, y: 161.91}
+  m_AnchoredPosition: {x: -99.087, y: 162.15489}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &968577008
