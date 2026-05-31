@@ -1,42 +1,55 @@
-🏫 Project: School Anomaly Hunt
-Developer: Efe Can
+# 🏫 Project Title: [School Anomaly]
 
-Department: Digital Game Design, İKÜ
+[![Unity Version](https://img.shields.io/badge/Unity-6000.3.2f1-blue.svg)](https://unity.com/)
+[![Platform](https://img.shields.io/badge/Platform-PC%20%2F%20Windows-orange.svg)]()
+[![Genre](https://img.shields.io/badge/Genre-Psychological%20Horror%20%2F%20Puzzle-red.svg)]()
 
-📝 A Personal Note & Apology
-First and foremost, I would like to sincerely apologize for the missing features and technical errors in this current version of the project.
+An atmospheric, time-sensitive horror/puzzle game where you must cleanse your school from supernatural anomalies before time runs out. And no, your friend Yusuf won't be of any help.
 
-Recently, I have been going through a very difficult period due to unexpected health challenges, which significantly impacted my productivity. Despite these hardships, I dedicated a vast amount of my time to the software and technical architecture of this game.
+---
 
-Note to Evaluator: I kindly invite you to examine the codebase and scripts. While some visual or gameplay features might be lacking, the underlying logic and system communication (Cinemachine blending, Event systems, and Physics-based interaction) represent the true depth of my effort. I appreciate your understanding and hope the technical dedication shines through the current shortcomings.
+## 👁️ Game Overview
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+You play as a student trapped in a school taken over by paranormal distortions. Your objective is simple but terrifying: locate and fix every single anomaly within a strict time limit. If you fail, the school consumes you. 
 
-🎮 Game Design Document (GDD)
-1. Concept Overview
-School Anomaly Hunt is a first/third-person psychological horror and puzzle game. The player takes on the role of a student/investigator tasked with clearing a school environment of supernatural anomalies.
+To make matters worse, you aren't entirely alone. Your friend **Yusuf** is with you, but due to his extreme cowardice, he won't help you find or fix anything—he will just follow you around, panic, and slow you down mentally.
 
-2. Core Gameplay Loop
-Explore: Navigate through school corridors and classrooms.
+### 🎯 Core Pillars
+* **Time Urgency:** Every second matters. A ticking clock increases the tension as you search the corridors.
+* **Observation:** Players must memorize what "normal" looks like to detect when something is wrong.
+* **The Companion Burden:** Managing the atmosphere while a terrified NPC follows your every move.
 
-Identify: Use observation skills to find 3 specific anomalies in the environment.
+---
 
-Interact: Use the 'E' key to "cleanse" or interact with the anomalies.
+## 🕹️ Gameplay Mechanics
 
-Survival: All tasks must be completed within a strict Time Limit.
+### 🏃‍♂️ Player Controls
+| Key | Action | Description |
+| :---: | :--- | :--- |
+| **`W` `A` `S` `D`** | Move |
+| **`Shift`** | Sprint |
+| **`Space`** | Jump | 
+| **`E`** | Interact / Fix | Cleanse and restore a detected anomaly back to normal. |
 
-3. The "Fail State" (The Creature)
-Time is your greatest enemy. If the player fails to identify and clear the anomalies before the timer hits zero:
+### 🛑 The Game Loop
+1.  **Search:** Explore the school sectors under a strict countdown timer.
+2.  **Identify:** Spot objects that are floating, reversed, bleeding, or behaving unnaturally.
+3.  **Fix:** Approach the anomaly and press **`E`** to purify it.
+4.  **Survive:** Cleanse all anomalies before the timer hits zero, or face instant death.
 
-A mysterious creature spawns within the school.
+---
 
-The creature hunts the player down, leading to an immediate Game Over.
+## 👥 Characters
 
-4. Technical Features
-Cinemachine System: Advanced camera switching (Follow, Security, and Zoom) using Custom Blending for a cinematic feel.
+### 🧑 The Protagonist (You)
+A brave student determined to survive the night. Equipped with the unique ability or tools to cleanse paranormal glitches, you carry the entire weight of saving the school on your shoulders.
 
-Script Communication: Heavy use of UnityEvents to trigger animations, sounds, and gameplay states without hard-coding dependencies.
+### 😨 Yusuf (The "Helper")
+* **Role:** Companion NPC.
+* **Behavior:** Completely terrified. He cannot detect anomalies, nor will he help you fix them.
 
-Physics Interaction: Precise raycasting system for object detection and anomaly cleansing.
-************************************************
-Thank you for your time and evaluation. Efe Can
+---
+
+## 👻 The Anomaly System
+
+Anomalies spawn randomly across classrooms, cafeterias, and hallways. They can range from subtle environmental changes to aggressive supernatural phenomena.
